@@ -13,7 +13,7 @@ srand(time(0));
 Player2=(rand() % 3);
 
 printf("Only Player1 choose\n");
-printf("0.scisor 2.rock 3.paper :  ");
+printf("0.scisor 1.rock 2.paper :  ");
 scanf("%d", &Player1);
 
 if(Player1==0)
