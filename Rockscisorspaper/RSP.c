@@ -3,7 +3,7 @@
 #include<time.h>
 
 
-int main(void)
+void RSP(void)
 {
 printf("Choose your Number\n");
 
@@ -61,6 +61,4 @@ else
 {
 printf("Player1 wins, Player2 loses\n");
 }
-
-return 0;
 }
