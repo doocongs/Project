@@ -18,7 +18,7 @@ void main()
   scanf("%d",&a);
   printf("How many 'Bomb' you needs?\n");
   scanf("%d",&b);
-  
+ 
   for( int i = 0 ; i < a; i++){
     c[i].data = 0; // 0 is pass 1 is fail
     c[i].flag = 0;
@@ -29,15 +29,19 @@ void main()
   }
   shuffle(a,b,c);
   
- // for(int i = 0; i < a; i++){
+  for(int i = 0; i < a; i++){
     printf("Press button in 1 ~ %d\n", a);
-   // scanf("%d", &g);
+    scanf("%d", &g);
+    printf("===============================\n");
+    c[g-1].flag = 1;
     for(int j = 0; j < a; j++){
-        printf("%d :", j+1);
-     //   if( c[g-1] == 1) printf("X\n");
-       // if( c[g-1] == 0) printf("O\n");
+        printf("%d : ", j+1);
+        if( (c[j].flag == 1) && c[j].data == 1) printf("X");
+        if( (c[j].flag == 1) && c[j].data == 0) printf("O");
+        printf("\n"); 
     }
-  //} 
+    printf("===============================\n");
+  } 
 }
 
 void shuffle(int aa, int bb, card *cc)
