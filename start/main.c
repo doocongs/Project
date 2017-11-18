@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "RSP.c"
+#include "bbopgi.c"
 
 void main()
 {
@@ -10,7 +11,7 @@ void main()
   while(1){
     scanf("%d",&a);
     if( a == 1){
-      //bbopgi();
+      bbopgi();
       break;
     }
     else if( a == 2){
