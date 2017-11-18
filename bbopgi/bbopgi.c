@@ -2,6 +2,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+void shuffle(int aa, int bb, char *cc);
+
 void main()
 {
   char c[100];
@@ -18,17 +20,17 @@ void main()
   for( int i = 0 ; i < b; i++){
     c[i] = 1;
   }
-  
+  shuffle(a,b,c);
   
 }
 
-void shuffle(int aa, char *bb)
+void shuffle(int aa, int bb, char *cc)
 {
   srand((unsigned int)time(NULL));
   
-  char e,f;
+  char e;
   char d[100];
-  for(int i = 0; i < aa; i++){
+  for(int i = 0; i < bb; i++){
     d[i] = rand() % aa  + 1;
 	
     for(int j = 0; j < i; j++){
@@ -40,8 +42,10 @@ void shuffle(int aa, char *bb)
   }
   
   
-  for(int i = 0; i < aa; i++){
-     
+  for(int i = 0; i < bb; i++){
+    e = d[i];
+    f = cc[e];
+    cc[e] = cc[i];
+    cc[i] = f;
   } 
- 
 }
