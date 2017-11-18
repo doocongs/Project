@@ -32,13 +32,25 @@ void main()
   for(int i = 0; i < a; i++){
     printf("Press button in 1 ~ %d\n", a);
     scanf("%d", &g);
+    if( g > a ){
+      printf("please press under %d\n",a);
+      i--;
+      continue;
+    }
+    if( c[g-1].flag == 1){
+      printf("You already choose this number!!\n");
+      i--;
+      continue;
+    }
     printf("===============================\n");
-    c[g-1].flag = 1;
     for(int j = 0; j < a; j++){
-        printf("%d : ", j+1);
-        if( (c[j].flag == 1) && c[j].data == 1) printf("X");
-        if( (c[j].flag == 1) && c[j].data == 0) printf("O");
-        printf("\n"); 
+      
+      c[g-1].flag = 1;
+
+      printf("%d : ", j+1);
+      if( (c[j].flag == 1) && c[j].data == 1) printf("X");
+      if( (c[j].flag == 1) && c[j].data == 0) printf("O");
+      printf("\n"); 
     }
     printf("===============================\n");
   } 
