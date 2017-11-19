@@ -12,13 +12,26 @@ int Player2;
 srand(time(0));
 Player2=(rand() % 3);
 
-printf("Only Player1 choose\n");
+printf("Choose Only Player1\n");
 printf("0.scisor 1.rock 2.paper :  ");
 scanf("%d", &Player1);
 
-if(Player1==0)
+while(1){
+ if(Player1<0 || Player1>2 )
  {
-   printf("Player1 is scisor\n");
+   printf("out of Range, choose 0~2.");
+   scanf("%d", &Player1);
+ }
+ else
+ {
+  break;
+ }
+}
+
+
+if(Player1==0)
+  {
+    printf("Player1 is scisor\n");
   }
 else
  {
@@ -51,7 +64,7 @@ printf("Player2 is paper\n");
 
 if(Player1==Player2)
 {
-printf("Same Score!!\n");
+ printf("Same Score!!\n");
 }
 else if((Player1+1)%3 == Player2)
 {
