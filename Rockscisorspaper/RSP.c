@@ -19,7 +19,7 @@ scanf("%d", &Player1);
 while(1){
  if(Player1<0 || Player1>2 )
  {
-   printf("out of Range, choose 0~2.");
+   printf("out of Range, choose 0~2. :");
    scanf("%d", &Player1);
  }
  else
@@ -68,10 +68,10 @@ if(Player1==Player2)
 }
 else if((Player1+1)%3 == Player2)
 {
-printf("Player1 loses, Player2 wins\n");
+ printf("Player1 loses, Player2 wins\n");
 }
 else
 {
-printf("Player1 wins, Player2 loses\n");
+ printf("Player1 wins, Player2 loses\n");
 }
 }
