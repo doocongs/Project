@@ -1,11 +1,15 @@
-.PHONY : clean
+DIRS = Rockscisorspaper bbopgi
 
-main: main.o 
-	gcc -o main main.o
+.PHONY : all clean
 
-main.o: main.c RSP.c bbopgi.c
-	gcc -c main.c RSP.c bbopgi.c
+all:
+@for d in $(DIRS);\
+do\
+$(MAKE) -C $$d;\
+done
 	
-
 clean:
-	rm *.o main
+@for d in $(DIRS);\
+do\
+$(MAKE) -C $$d clean;\
+done
