@@ -10,7 +10,7 @@ typedef struct
 
 void shuffle(int aa, int bb, card *cc);
 
-void main()
+void bbopgi()
 {
   card c[100];
   int a,b,g;
