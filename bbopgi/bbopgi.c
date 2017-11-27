@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
-
+#include "bbopgi.h"
 typedef struct
 {
   char data;
@@ -10,7 +10,7 @@ typedef struct
 
 void shuffle(int aa, int bb, card *cc);
 
-void main()
+void bbopgi()
 {
   card c[100];
   int a,b,g;

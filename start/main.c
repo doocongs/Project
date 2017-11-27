@@ -1,6 +1,7 @@
 #include <stdio.h>
-#include "RSP.c"
-#include "bbopgi.c"
+#include "RSP.h"
+#include "bbopgi.h"
+
 
 void main()
 {
