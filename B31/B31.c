@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include <B31.h>
 
-void 31(){
+void B31(){
   int player;
   int plyaer_sum = 0;
   int num;

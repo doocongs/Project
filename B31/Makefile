@@ -1,7 +1,7 @@
 .PHONY: clean
 
-31.o: 31.c
-	gcc -c 31.c
+B31.o: B31.c
+	gcc -c B31.c
 clean: 
 	rm *.o
 
