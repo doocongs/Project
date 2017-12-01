@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "RSP.h"
 #include "bbopgi.h"
-
+#include "B31.h"
 
 void main()
 {
@@ -21,7 +21,7 @@ void main()
       break;
     }
     else if( a == 3){
-      //31();
+      B31();
       break;
     }
     else if( a == 4){
