@@ -11,7 +11,7 @@ struct Student
 struct Student StudentList[Max];
 
 
-int main(){
+int Roulette(){
 
 
   srand(time(0));
