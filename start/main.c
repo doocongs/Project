@@ -1,6 +1,13 @@
 #include <stdio.h>
+<<<<<<< HEAD
 #include"RSP.h"
 #include"bbopgi.h"
+=======
+#include "RSP.h"
+#include "bbopgi.h"
+#include "B31.h"
+
+>>>>>>> 048a76cf0a48129fe463db100f03ffdd6e9e7b95
 void main()
 {
   int a;
@@ -20,7 +27,7 @@ void main()
       break;
     }
     else if( a == 3){
-      //31();
+      B31();
       break;
     }
     else if( a == 4){
