@@ -1,4 +1,4 @@
-DIRS = RSP bbopgi B31 start
+DIRS = RSP bbopgi B31 start Roulette
 
 .PHONY: all clean
 
