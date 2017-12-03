@@ -1,13 +1,11 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include"RSP.h"
 #include"bbopgi.h"
-=======
+
 #include "RSP.h"
 #include "bbopgi.h"
 #include "B31.h"
-
->>>>>>> 048a76cf0a48129fe463db100f03ffdd6e9e7b95
+#include "Roulette.h"
 void main()
 {
   int a;
