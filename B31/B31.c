@@ -3,7 +3,7 @@
 
 void B31(){
   int player;
-  int plyaer_sum = 0;
+  int player_sum = 0;
   int num;
   int sum = 0;
   printf("How many players?\n");
