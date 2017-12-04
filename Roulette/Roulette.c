@@ -32,7 +32,7 @@ int main(){
   scanf("%d",&Rnum );
   RandNum=rand()%(Rnum+1);
   
-  printf("%d is The Random Number\n", RandNum);
+  printf("%d is The Dead Number\n", RandNum);
 
   int LastValue =RandNum;
 
@@ -53,7 +53,7 @@ int main(){
 
     if(RandNum==LastValue)
     {
-    printf("<<< %d >>> You are Lose....\n", RandNum);
+    printf("<<< %d >>> You dead....\n", RandNum);
     printf("GAME OVER");
     return 0;
     }
