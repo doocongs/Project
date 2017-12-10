@@ -2,76 +2,150 @@
 #include<stdlib.h>
 #include<time.h>
 #include "RSP.h"
+#include <pthread.h>
+#include <termio.h>
+#include "getch.h"
 
-void RSP(void)
+volatile char P1;
+int getch(void)
 {
-printf("Choose your Number\n");
+    int ch;
 
-int Player1;
-int Player2;
-srand(time(0));
-Player2=(rand() % 3);
+    struct termios old;
+    struct termios new;
 
-printf("Choose Only Player1\n");
-printf("0.scisor 1.rock 2.paper :  ");
-scanf("%d", &Player1);
+    tcgetattr(0, &old);
+    new = old;
+    new.c_lflag &= ~(ICANON|ECHO);
+    new.c_cc[VMIN] = 1;
+    new.c_cc[VTIME] = 0;
 
-while(1){
- if(Player1<0 || Player1>2 )
+    tcsetattr(0, TCSAFLUSH, &new);
+    ch = getchar();
+    tcsetattr(0, TCSAFLUSH, &old);
+    return ch;
+}
+
+
+void *myfunc(void *arg)
+{
+ P1=getch();
+ pthread_exit(NULL);
+}
+ 
+void RSP()
+{
+ srand(time(0));
+ int cumputer=rand()%3+1;
+
+ if(cumputer==1)
  {
-   printf("out of Range, choose 0~2. :");
-   scanf("%d", &Player1);
+ 
+ printf("             _ _ _ _\n");
+ printf("           _| | | | |\n");
+ printf("computer: | |       |\n");
+ printf("           -________|\n");
+ }
+ else if(cumputer==2)
+ {
+ printf("             _ _ \n");
+ printf("            |_|_| \n");
+ printf("            |_|_|_ _ \n");
+ printf("           _| | | | |\n");
+ printf("computer: | |       |\n");
+ printf("           -________|\n");
  }
  else
  {
-  break;
- }
-}
-
-
-if(Player1==0)
-  {
-    printf("Player1 is scisor\n");
-  }
-else
- {
-  if(Player1==1)
-  {
-   printf("Player1 is rock\n");
-  }
-  else
-  {
-   printf("Player1 is paper\n");
-  }
+ printf("             _ _ _ _\n");
+ printf("            |_|_|_|_|\n");
+ printf("            |_|_|_|_| \n");
+ printf("           _| | | | |\n");
+ printf("computer: | |       |\n");
+ printf("           -________|\n");
  }
 
 
-if(Player2==0)
-{printf("Player2 is scisor\n");
-}
-else
+
+
+ pthread_t mythread, mythread2;
+ pthread_create(&mythread,NULL,myfunc, NULL);
+
+ int tmp=0;
+
+while(1){
+
+if( P1 == 'z')
 {
-if(Player2==1)
-{
-printf("Player2 is rock\n");
+	break;
 }
-else
+
+tmp++;
+if(tmp>3)
 {
-printf("Player2 is paper\n");
+  tmp=1;
 }
+
+system("clear");
+if(cumputer==1){
+printf("             _ _ _ _\n");
+printf("           _| | | | |\n");
+printf("computer: | |       |\n");  
+printf("           -________|\n");
+}
+      else if(cumputer==2)
+       {
+        printf("             _ _ \n"); 
+	 printf("            |_|_| \n");
+	  printf("            |_|_|_ _ \n"); 
+	   printf("           _| | | | |\n");
+	    printf("computer: | |       |\n");  
+	     printf("           -________|\n");
+	      }
+	       else
+	        {
+		 printf("             _ _ _ _\n");
+		  printf("            |_|_|_|_|\n");
+		   printf("            |_|_|_|_| \n");
+		    printf("           _| | | | |\n");
+		     printf("computer: | |       |\n");  
+printf("           -________|\n");
+		       }
+
+
+
+
+
+if(tmp==1){
+
+printf("             _ _ _ _\n");
+printf("           _| | | | |\n");
+printf("   user:  | |       |\n");
+printf("           -________|\n");
+
+}
+else if(tmp==2){
+printf("             _ _ \n");
+printf("            |_|_| \n");
+printf("            |_|_|_ _ \n");
+printf("           _| | | | |\n");
+printf("   user:  | |       |\n");
+printf("           -________|\n");
+
+}
+
+else if(tmp==3)
+{
+printf("             _ _ _ _\n");
+printf("            |_|_|_|_|\n");
+printf("            |_|_|_|_| \n");
+printf("           _| | | | |\n");
+printf("   user:  | |       |\n");
+printf("           -________|\n");
 }
 
 
-if(Player1==Player2)
-{
- printf("Same Score!!\n");
 }
-else if((Player1+1)%3 == Player2)
-{
- printf("Player1 loses, Player2 wins\n");
-}
-else
-{
- printf("Player1 wins, Player2 loses\n");
-}
+pthread_join(mythread, NULL);
+
 }
