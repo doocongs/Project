@@ -149,3 +149,141 @@ printf("           -________|\n");
 pthread_join(mythread, NULL);
 
 }
+
+*/
+
+
+
+#include<stdio.h>
+      2 #include<stdlib.h>
+            3 #include<time.h>
+	          4 #include "RSP.h"
+		        5 #include <pthread.h>
+			      6 #include <termio.h>
+			            7 #include "getch.h"
+				          8 
+					        9 volatile char P1;
+						     10 int getch(void)
+						          11 {
+							       12     int ch;
+							            13 
+								         14     struct termios old;
+									      15     struct termios new;
+									           16 
+										        17     tcgetattr(0, &old);
+											     18     new = old;
+											          19     new.c_lflag &= ~(ICANON|ECHO);
+												       20     new.c_cc[VMIN] = 1;
+												            21     new.c_cc[VTIME] = 0;
+													         22 
+														      23     tcsetattr(0, TCSAFLUSH, &new);
+														           24     ch = getchar();
+															        25     tcsetattr(0, TCSAFLUSH, &old);
+																     26     return ch;
+																     #include<stdio.h>
+																           2 #include<stdlib.h>
+																	         3 #include<time.h>
+																		       4 #include "RSP.h"
+																		             5 #include <pthread.h>
+																			           6 #include <termio.h>
+																				         7 #include "getch.h"
+																					       8 
+																					             9 volatile char P1;
+																						          10 int getch(void)
+																							       11 {
+																							            12     int ch;
+																								         13 
+																									      14     struct termios old;
+																									           15     struct termios new;
+																										        16 
+																											     17     tcgetattr(0, &old);
+																											          18     new = old;
+																												       19     new.c_lflag &= ~(ICANON|ECHO);
+																												            20     new.c_cc[VMIN] = 1;
+																													         21     new.c_cc[VTIME] = 0;
+																														      22 
+																														           23     tcsetattr(0, TCSAFLUSH, &new);
+																															        24     ch = getchar();
+																																     25     tcsetattr(0, TCSAFLUSH, &old);
+																																          26     return ch;
+																																	  #include<stdio.h>
+																																	        2 #include<stdlib.h>
+																																		      3 #include<time.h>
+																																		            4 #include "RSP.h"
+																																			          5 #include <pthread.h>
+																																				        6 #include <termio.h>
+																																					      7 #include "getch.h"
+																																					            8 
+																																						          9 volatile char P1;
+																																							       10 int getch(void)
+																																							            11 {
+																																								         12     int ch;
+																																									      13 
+																																									           14     struct termios old;
+																																										        15     struct termios new;
+																																											     16 
+																																											          17     tcgetattr(0, &old);
+																																												       18     new = old;
+																																												            19     new.c_lflag &= ~(ICANON|ECHO);
+																																													         20     new.c_cc[VMIN] = 1;
+																																														      21     new.c_cc[VTIME] = 0;
+																																														           22 
+																																															        23     tcsetattr(0, TCSAFLUSH, &new);
+																																																     24     ch = getchar();
+																																																          25     tcsetattr(0, TCSAFLUSH, &old);
+																																																	       26     return ch;
+																																																	       #include<stdio.h>
+																																																	             2 #include<stdlib.h>
+																																																		           3 #include<time.h>
+																																																			         4 #include "RSP.h"
+																																																				       5 #include <pthread.h>
+																																																				             6 #include <termio.h>
+																																																					           7 #include "getch.h"
+																																																						         8 
+																																																							       9 volatile char P1;
+																																																							            10 int getch(void)
+																																																								         11 {
+																																																									      12     int ch;
+																																																									           13 
+																																																										        14     struct termios old;
+																																																											     15     struct termios new;
+																																																											          16 
+																																																												       17     tcgetattr(0, &old);
+																																																												            18     new = old;
+																																																													         19     new.c_lflag &= ~(ICANON|ECHO);
+																																																														      20     new.c_cc[VMIN] = 1;
+																																																														           21     new.c_cc[VTIME] = 0;
+																																																															        22 
+																																																																     23     tcsetattr(0, TCSAFLUSH, &new);
+																																																																          24     ch = getchar();
+																																																																	       25     tcsetattr(0, TCSAFLUSH, &old);
+																																																																	            26     return ch;
+																																																																		    #include<stdio.h>
+																																																																		          2 #include<stdlib.h>
+																																																																			        3 #include<time.h>
+																																																																				      4 #include "RSP.h"
+																																																																				            5 #include <pthread.h>
+																																																																					          6 #include <termio.h>
+																																																																						        7 #include "getch.h"
+																																																																							      8 
+																																																																							            9 volatile char P1;
+																																																																								         10 int getch(void)
+																																																																									      11 {
+																																																																									           12     int ch;
+																																																																										        13 
+																																																																											     14     struct termios old;
+																																																																											          15     struct termios new;
+																																																																												       16 
+																																																																												            17     tcgetattr(0, &old);
+																																																																													         18     new = old;
+																																																																														      19     new.c_lflag &= ~(ICANON|ECHO);
+																																																																														           20     new.c_cc[VMIN] = 1;
+																																																																															        21     new.c_cc[VTIME] = 0;
+																																																																																     22 
+																																																																																          23     tcsetattr(0, TCSAFLUSH, &new);
+																																																																																	       24     ch = getchar();
+																																																																																	            25     tcsetattr(0, TCSAFLUSH, &old);
+																																																																																		         26     return ch;
+
+
+/*
