@@ -10,12 +10,12 @@
 void main()
 {
   system("clear");
-  
-  printf("Choose Game!!\n");  
-  printf("1. BBopgi Game              << \n");
-  printf("2. Rock Scissors Paper\n");
-  printf("3. BR 31\n");
-  printf("4. Roulette\n");
+  printf("\n\n\n");  
+  printf("                        	Choose Game!!   w    s\n				Enter is o\n\n\n");  
+  printf("                        	1. BBopgi Game              << \n");
+  printf("                        	2. Rock Scissors Paper\n");
+  printf("                        	3. BR 31\n");
+  printf("				4. Roulette\n");
 
   int cnt = 1;
   while(1){
@@ -35,31 +35,50 @@ void main()
         cnt = 1;
       }
     }
-    printf("Choose Game!!\n");
+    else if( a == 'o'){
+      if( cnt == 1 ){
+        bbopgi();
+        break;
+      }
+      else if( cnt == 2){
+        RSP();
+        break;
+      }
+      else if( cnt == 3){
+        B31();
+        break;
+      }
+      else if( cnt == 4){
+        Roulette();
+        break;
+      }
+    }
+    printf("\n\n\n");
+    printf("				Choose Game!!   w    s\n				Enter is o\n\n\n");
     
-    if( cnt == 1){
-      printf("1. BBopgi Game              << \n");
-      printf("2. Rock Scissors Paper\n");
-      printf("3. BR 31\n");
-      printf("4. Roulette\n");
+    if( cnt == 1){     
+      printf("				1. BBopgi Game              << \n");
+      printf("				2. Rock Scissors Paper\n");
+      printf("				3. BR 31\n");
+      printf("				4. Roulette\n");
     }
     else if( cnt == 2){
-      printf("1. BBopgi Game    \n");
-      printf("2. Rock Scissors Paper      <<\n");
-      printf("3. BR 31\n");
-      printf("4. Roulette\n");
+      printf("				1. BBopgi Game    \n");
+      printf("				2. Rock Scissors Paper      <<\n");
+      printf("				3. BR 31\n");
+      printf("				4. Roulette\n");
     }
     else if( cnt == 3){
-      printf("1. BBopgi Game     \n");
-      printf("2. Rock Scissors Paper\n");
-      printf("3. BR 31                    <<\n");
-      printf("4. Roulette\n");
+      printf("				1. BBopgi Game     \n");
+      printf("				2. Rock Scissors Paper\n");
+      printf("				3. BR 31                    <<\n");
+      printf("				4. Roulette\n");
     }
     else if( cnt ==4){
-      printf("1. BBopgi Game   \n");
-      printf("2. Rock Scissors Paper\n");
-      printf("3. BR 31\n");
-      printf("4. Roulette                 <<\n");
+      printf("				1. BBopgi Game   \n");
+      printf("				2. Rock Scissors Paper\n");
+      printf("				3. BR 31\n");
+      printf("				4. Roulette                 <<\n");
     }
   } 
 }
