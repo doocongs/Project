@@ -2,6 +2,7 @@
 #include <time.h>
 #include <stdlib.h>
 #include "bbopgi.h"
+
 typedef struct
 {
   char data;
@@ -28,10 +29,20 @@ void bbopgi()
     c[i].data = 1;
   }
   shuffle(a,b,c);
-  
+  printf("===============================\n");
+    for(int j = 0; j < a; j++){
+      printf(" ___\n");
+      printf("|   |\n");
+      printf("| %d |\n",j+1);
+      printf("|___|\n");
+    }
+    printf("===============================\n");
+
+    
   for(int i = 0; i < a; i++){
     printf("Press button in 1 ~ %d\n", a);
     scanf("%d", &g);
+    system("clear");
     if( g > a ){
       printf("please press under %d\n",a);
       i--;
@@ -46,11 +57,16 @@ void bbopgi()
     for(int j = 0; j < a; j++){
       
       c[g-1].flag = 1;
-
-      printf("%d : ", j+1);
-      if( (c[j].flag == 1) && c[j].data == 1) printf("X");
-      if( (c[j].flag == 1) && c[j].data == 0) printf("O");
-      printf("\n"); 
+      printf(" ___\n");
+      printf("|   |\n");
+      if( (c[j].flag == 1) && c[j].data == 1){
+        printf("| X |\n");
+      }
+      else if( (c[j].flag == 1) && c[j].data == 0){
+        printf("| O |\n");
+      }
+      else printf("| %d |\n",j+1);
+      printf("|___|\n");
     }
     printf("===============================\n");
   } 
