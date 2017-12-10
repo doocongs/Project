@@ -150,7 +150,7 @@ pthread_join(mythread, NULL);
 
 }
 
-*/
+/*
 
 
 
@@ -286,4 +286,4 @@ pthread_join(mythread, NULL);
 																																																																																		         26     return ch;
 
 
-/*
+*/
