@@ -7,7 +7,7 @@
 #include "getch.h"
 
 volatile char P1;
-/*int getch(void)
+int getch(void)
 {
     int ch;
 
@@ -25,7 +25,7 @@ volatile char P1;
     tcsetattr(0, TCSAFLUSH, &old);
     return ch;
 }
-*/
+
 
 void *myfunc(void *arg)
 {

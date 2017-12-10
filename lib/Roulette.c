@@ -7,7 +7,7 @@
 
 volatile char P2;
 
-int getch(void)
+/*int getch(void)
 {
     int ch; 
 
@@ -23,7 +23,7 @@ int getch(void)
         ch = getchar();
 	    tcsetattr(0, TCSAFLUSH, &old);
 	        return ch;
-}
+}*/
 
 /*
 #define Max 100
