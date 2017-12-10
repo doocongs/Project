@@ -1,4 +1,4 @@
-DIRS = RSP bbopgi B31 start
+DIRS = lib start
 
 .PHONY: all clean
 
