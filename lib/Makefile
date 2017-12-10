@@ -7,7 +7,7 @@ B31.o: B31.c
 RSP.o: RSP.c
 	gcc -c RSP.c -I../include -pthread
 Roulette.o: Roulette.c
-	gcc -c Roulette.c -I../include
+	gcc -c Roulette.c -I../include -pthread
 bbopgi.o: bbopgi.c
 	gcc -c bbopgi.c -I../include
 getch.o: getch.c
